@@ -1,0 +1,75 @@
+#mybook
+{
+	position:absolute;
+	top:100px;
+	left:300px;
+}
+body {background:#ccc; font:normal 12px/1.2 arial, verdana, sans-serif;}
+#imgfirst
+{
+    position:absolute;
+    top:0px;
+}
+#imglast
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+#menuwrapper
+{
+    position:absolute;
+    top:100px;
+    left:150px;
+}
+#menuwrapper ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+#menuwrapper ul li{
+    background-color:#FFFFFF;
+    width:115px;
+    cursor:pointer;
+    padding:5px 15px;
+    color:#000000;
+    font-weight:bold;
+    display:block;
+    text-decoration:none;	
+}
+#menuwrapper ul li:hover{
+    background-color:#6679e9;
+    position:relative;
+}
+#menuwrapper ul li:hover ul{
+    left:150px;
+    display:block;
+}
+#menuwrapper ul li ul li{
+    background-color:#cae25a;
+    color:#454444;
+    display:inline-block;
+    width:120px;
+}
+#menuwrapper ul li:hover ul li:hover{
+    background-color:#b1b536;
+}
+#menuwrapper ul li:hover ul li ul{
+    position:absolute;
+    display:none;
+}
+#menuwrapper ul li:hover ul li:hover ul{
+    display:block;
+    left:29px;
+    top:0;
+}
+ 
+
+#menuwrapper ul li:hover ul li:hover ul li{
+    background:#86d3fa;
+}
+#idPrevNextLink
+{
+position: absolute;
+top:500px;
+}

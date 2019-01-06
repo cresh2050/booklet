@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Booklet- jQuery Plugin</title>
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- required files for booklet -->
+    <script type="text/javascript" src="js/jquery.min.js" ></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js" ></script>  
+    <script type="text/javascript" src="js/jquery.easing.1.3.js" ></script>
+    <script type="text/javascript" src="js/jquery.booklet.latest.js" ></script>
+    <link href="css/jquery.booklet.latest.css" type="text/css" rel="stylesheet" media="screen, projection, tv" />
+	<link href="css/index.css" type="text/css" rel="stylesheet" media="screen, projection, tv" />  
+   </head>
+<body>
+
+
+<div id="menuwrapper" onclick="Test()">
+	<ul class="classUserAccountList">
+	<li  id="1" value="idAccount" onclick="Test(this.id)">Open</li>
+		<li  id="3" value="idAccount" onclick="Test(this.id)">Account</li>
+		<li  id="5" value="idEmailAlert" onclick="Test(this.id)">Email Alerts</li>
+		<li  id="7" value="idTripsetting" onclick="Test(this.id)">Trip Setting</li>
+		<li  id="9" value="idCalendersetting" onclick="Test(this.id)">Calendar</li>
+		<li  id="11" value="idHistorysetting" onclick="Test(this.id)">History</li>
+		<li  id="13" value="idAccount" onclick="Test(this.id)">Close</li>
+	</ul>
+</div>
+	<section>
+<div id="mybook">
+	<div title="first page">
+	</div>
+	<div title="second page">
+	    <img src="images/firstpage.jpg" id="imgfirst" style="margin-left: 0px;" />
+	</div>
+	<div title="third page">
+	     Account
+	     <input type="text" value="">
+	</div>
+	<div title="fourth page">
+	</div>
+	<div title="fifth page">
+	Email
+	</div>
+        <div title="sixth page">
+	</div>
+	<div title="seventh page">
+	Trip
+	</div>
+	<div title="eighth page">
+	</div>
+	<div title="nine page">
+	Calendar
+	</div>
+	<div title="ten page">
+	</div>
+	<div title="eleven page">
+History
+	</div>
+	<div title="twelve page">
+
+	</div>
+	<div title="thirteen page" style="background:#fff;">
+	   <img src="images/firstpage.jpg" id="imglast" style="margin-left: 0px;" />
+	</div>	
+</div>
+	</section>
+	
+<script type="text/javascript">
+    $(function () {		
+    $("#mybook").booklet();
+    });
+function Test(pageNumber) {
+     $('#mybook').booklet("gotopage", pageNumber);
+}
+
+    $(".selector").booklet({ nextControlText: "Forward" });
+    var nextControlText = $(".selector").booklet( "option", "nextControlText" );
+  
+    $(".selector").booklet( "option", "nextControlText", "Forward" );
+    $(".selector").booklet({ previousControlText: "Back" });
+    var previousControlText = $(".selector").booklet( "option", "previousControlText" );
+    $(".selector").booklet( "option", "previousControlText", "Back" );
+</script>
+	</body>
+</html>
